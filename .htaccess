@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+Options -Indexes
+
+RewriteEngine On
+# Route an old static homepage through authentication after an in-place upload.
+RewriteRule ^index\.html$ index.php [L]
+
+# Block copies of the old public data file and the server-side credential config.
+<FilesMatch "^(auth-config\.php|projects\.js)$">
+    Require all denied
+</FilesMatch>

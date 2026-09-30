@@ -1,3 +1,8 @@
+<?php
+declare(strict_types=1);
+require __DIR__ . '/auth.php';
+require_login();
+?>
 <!doctype html>
 <html lang="en-GB">
 <head>
@@ -11,7 +16,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/style.css">
-  <script src="projects.js" defer></script>
+  <script src="projects.php" defer></script>
   <script src="assets/app.js" defer></script>
 </head>
 <body>
@@ -54,6 +59,6 @@
     </section>
     <section class="about wrap" id="about" aria-labelledby="about-heading"><div class="about-symbol" aria-hidden="true">✳</div><div><p class="eyebrow">BEHIND THE PROJECTS</p><h2 id="about-heading">Different ideas.<br>Same hands-on approach.</h2></div><div class="about-copy"><p>I’m Chris, based in Bolton. These projects bring together my work in construction, ideas for independent businesses and things that make everyday life a little easier.</p><p>Explore something useful. Discover something different.<br>There’s always another idea taking shape.</p><a href="#projects">Back to the collection <span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="footer wrap"><a class="brand" href="#"><span class="brand-mark">ci<span>.</span></span><span>CHRIS IRLAM<span class="brand-sub">A COLLECTION OF REAL IDEAS.</span></span></a><p>© <span id="year">2026</span> Chris Irlam</p><a href="#">Back to top ↑</a></footer>
+  <footer class="footer wrap"><a class="brand" href="#"><span class="brand-mark">ci<span>.</span></span><span>CHRIS IRLAM<span class="brand-sub">A COLLECTION OF REAL IDEAS.</span></span></a><p>© <span id="year">2026</span> Chris Irlam</p><form action="logout.php" method="post"><input type="hidden" name="csrf" value="<?= htmlspecialchars(csrf_token(), ENT_QUOTES, 'UTF-8') ?>"><button class="logout-button" type="submit">Sign out ↗</button></form><a href="#">Back to top ↑</a></footer>
 </body>
 </html>

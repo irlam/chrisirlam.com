@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+return <<<'PROJECT_DATA'
 // Add or edit website cards here. No GitHub connection or API key is needed.
 window.PROJECTS = [
   { name: 'Peaches Hair', url: 'https://peaches.hair', category: 'Business', icon: 'spark', theme: 'peach', featured: true, description: 'A little salon luxury. Beautiful hair, effortless appointment booking and a complete salon experience.', tags: ['Salon', 'Appointments'] },
@@ -19,3 +22,5 @@ window.PROJECTS = [
   { name: 'Telelistings', url: 'https://telegram.defecttracker.uk', category: 'Media', icon: 'play', theme: 'blue', description: 'Football television listings and poster publishing, brought together.', tags: ['Football', 'TV listings'] },
   { name: 'Eclectyc Energy', url: 'https://eclectyc.energy', category: 'Business', icon: 'bolt', theme: 'mint', description: 'Energy intelligence for estates, construction and industry.', tags: ['Energy', 'Insights'] }
 ];
+
+PROJECT_DATA;
